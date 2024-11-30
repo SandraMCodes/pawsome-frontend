@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import postLogin from "../api/post-login.js";
 import { useAuth } from "../hooks/use-auth.js";
 
-function LoginForm() {
+function SignupForm() {
     const navigate = useNavigate();
     const {auth, setAuth} = useAuth();
     const [credentials, setCredentials] = useState({
