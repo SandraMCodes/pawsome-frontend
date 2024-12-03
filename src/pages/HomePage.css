@@ -1,6 +1,13 @@
 #project-list {
-    display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  
+  @media screen and (min-width: 768px) {
+   display: grid;
     grid-template-columns: 30% 30% 30%;
     column-gap: 10px;
     row-gap: 10px;
   }
+}
