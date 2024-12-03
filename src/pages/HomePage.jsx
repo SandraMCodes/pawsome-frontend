@@ -7,7 +7,9 @@ function HomePage() {
   const { projects } = useProjects();    
    return (
        <div >
+        <header> Save a life, adopt a dog </header> 
         <img src={PawsomeImage} alt="pawsome logo" />
+        
        <div id="project-list">
            {projects.map((projectData, key) => {
                return <ProjectCard key={key} projectData={projectData} />; 
