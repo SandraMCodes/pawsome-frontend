@@ -11,15 +11,15 @@ function NavBar() {
       console.log(auth)
 
   return (
-    <div>
+    <>
+    
       <nav>
         <Link to="/">Home</Link>
         {auth.token ? (
-                  <Link to="/" onClick={handleLogout}>
-                      Log Out
-                    </Link>
-                  ) : (
-                  <Link to="/login">Login</Link>
+          <Link to="/" onClick={handleLogout}>
+            Log Out
+            </Link>) : (
+              <Link to="/login">Login</Link>
               )}
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
@@ -27,7 +27,7 @@ function NavBar() {
       </nav>
       {/* React Router will pass components into the <Outlet /> based on the path */}
       <Outlet />
-    </div>
+    </>
   );
 }
 

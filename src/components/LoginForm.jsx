@@ -41,6 +41,9 @@ function LoginForm() {
             } else {
               postLogin(result.data.username, result.data.password).then((response) => {
                 window.localStorage.setItem("token", response.token);
+                setAuth({
+                    token: response.token,
+                });
                 navigate("/");
               });
             }
