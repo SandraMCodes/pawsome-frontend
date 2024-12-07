@@ -13,19 +13,20 @@ function SignupForm() {
             password: "",
             confirmPassword: "",
            });
-         };
+         
+
    const signUpSchema = z.object({
          username: z.string().min(3, { message: "Username must be at least 3 characters long." }),
-         password: z.string().min(8, { message: "Password must be at least 8 characters long." })
-         confirmPassword: z.string().min(8 {message: "Confirm Password, Passwords must match"})
-
+         password: z.string().min(8, { message: "Password must be at least 8 characters long." }),
+         confirmPassword: z.string().min(8, {message: "Confirm Password, Passwords must match"}),
+   })
            const handleChange = (event) => {
               const { id, value } = event.target;
               setCredentials((prevCredentials) => ({
                ...prevCredentials,
                   [id]: value,
                }));
-            }});
+            };
         
 
              const handleSubmit = (event) => {
@@ -77,6 +78,7 @@ function SignupForm() {
            </button>
       </form>
     );
-  }
+   }
   
-  export default LoginForm;
+  
+  export default SignupForm;

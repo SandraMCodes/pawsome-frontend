@@ -9,9 +9,11 @@ import LoginPage from "./pages/LoginPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 
+
 // Here we import our components
 import NavBar from "./components/NavBar.jsx";
 import { AuthProvider } from "./components/AuthProvider.jsx";
+import  CreateProject  from "./pages/CreateProjectPage.jsx"
 
 // Here we create our router and tell it whats pages to render at what path
 const router = createBrowserRouter([
@@ -26,6 +28,11 @@ const router = createBrowserRouter([
                { path: "/project/:id", element: <ProjectPage /> },
                { path: "/about", element: <AboutPage /> },
                { path: "/contact", element: <ContactPage /> },
+               { path: "/project", element: <ProjectPage /> },
+               { path: "/newproject", element: <CreateProject /> },
+
+               
+
                
           ],
   },
